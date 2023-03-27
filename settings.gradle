@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Rebugger Sample"
-include ':app'
+include ':sample'
+include ':rebugger'
