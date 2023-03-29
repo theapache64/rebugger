@@ -56,22 +56,23 @@ fun VehicleUi(
 ![](https://i.imgur.com/jztXzP9.png)
 
 
-### 🖥 Sample Outputs
+## 🖥 Sample Outputs
 
+- When Rebugger hooked into your composable, it’ll print something like this
 
-When Rebugger hooked into your composable, it’ll print something like this
+![image](https://user-images.githubusercontent.com/9678279/228623885-b0516fbd-518b-4135-9016-1928c57bc0c1.png)
 
+- When VehicleUi recomposes due to car instance change
 
-When VehicleUi recomposes due to car instance change
+![image](https://user-images.githubusercontent.com/9678279/228624041-e6143b07-ca19-4c03-b49f-9b5bee7f936d.png)
 
+- When VehicleUi recomposes due to both  car and bike instance change
 
+![image](https://user-images.githubusercontent.com/9678279/228624288-498558a1-697a-46e7-99a6-e2c53ff1f975.png)
 
-When VehicleUi recomposes due to both  car and bike instance change
+- When VehicleUi recomposes due to human instance change (State within the composable)
 
-
-
-When VehicleUi recomposes due to human instance change (State within the composable)
-
+![image](https://user-images.githubusercontent.com/9678279/228624484-c1de1112-c13c-4b9b-8788-e2a4b917368e.png)
 
 
 ## 🟠 Limitation
@@ -83,8 +84,8 @@ When Rebugger is placed deep inside the composable, it may not be able to pick t
 ```kotlin
 @Composable
 fun VehicleUi(
-car: Car,
-bike: Bike,
+  car: Car,
+  bike: Bike,
 ) {
 // ...
 
@@ -131,4 +132,4 @@ Rebugger(
 
 ## 🌇 TODO
 
-- IDE plugin : To generate `Rebugger` call (vote here)
+- IDE plugin : To generate `Rebugger` call (vote [here](https://github.com/theapache64/rebugger/issues/1))
