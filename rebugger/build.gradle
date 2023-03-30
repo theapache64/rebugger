@@ -8,6 +8,13 @@ android {
     namespace 'com.theapache64.rebugger'
     compileSdk 33
 
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+
     defaultConfig {
         minSdk 24
         targetSdk 33
@@ -50,14 +57,15 @@ dependencies {
     implementation "androidx.compose.runtime:runtime:$compose_version"
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            mavenPublication(MavenPublication) {
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.theapache64'
+            artifactId = 'rebugger'
+            version = '1.0.0-alpha02'
+
+            afterEvaluate {
                 from components.release
-                groupId 'com.github.theapache64'
-                artifactId 'rebugger'
-                version '1.0.0-alpha01'
             }
         }
     }
