@@ -62,4 +62,5 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
     implementation project(":rebugger")
+    // implementation 'com.github.theapache64:rebugger:fc770551b5'
 }
