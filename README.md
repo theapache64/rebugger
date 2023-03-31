@@ -1,5 +1,7 @@
 # 🐞 Rebugger
 
+> Rebugger : A recomposition debugger
+
 Being a “compose dev” our enemy number one is unnecessary recompositions 🤕. Often times we use tools like [recompositionHighligher](https://github.com/theapache64/boil/blob/master/files/RecompositionHighlighter.kt), [LogComposition](https://github.com/theapache64/boil/blob/master/files/LogComposition.kt), and layout inspector to count the recomposition, but there’s no direct way to understand “why” the recomposition has happened.
 
 Rebugger is a simple compose utility function that can track the change in the given arguments. It’ll print the reason for recomposition in your Logcat window.
