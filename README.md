@@ -115,7 +115,10 @@ fun VehicleUi(
 
 It’ll print something like this
 
-### Fix
+![image](https://user-images.githubusercontent.com/9678279/229018052-97d66da3-c716-4553-a930-92ca740facc2.png)
+
+
+### The Fix
 
 To fix this, you can pass composableName argument to override the automatic name picking behaviour
 
