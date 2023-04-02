@@ -1,5 +1,7 @@
 # 🐞 Rebugger
 
+> Rebugger : A recomposition debugger
+
 Being a “compose dev” our enemy number one is unnecessary recompositions 🤕. Often times we use tools like [recompositionHighligher](https://github.com/theapache64/boil/blob/master/files/RecompositionHighlighter.kt), [LogComposition](https://github.com/theapache64/boil/blob/master/files/LogComposition.kt), and layout inspector to count the recomposition, but there’s no direct way to understand “why” the recomposition has happened.
 
 Rebugger is a simple compose utility function that can track the change in the given arguments. It’ll print the reason for recomposition in your Logcat window.
@@ -115,7 +117,10 @@ fun VehicleUi(
 
 It’ll print something like this
 
-### Fix
+![image](https://user-images.githubusercontent.com/9678279/229018052-97d66da3-c716-4553-a930-92ca740facc2.png)
+
+
+### The Fix
 
 To fix this, you can pass composableName argument to override the automatic name picking behaviour
 
