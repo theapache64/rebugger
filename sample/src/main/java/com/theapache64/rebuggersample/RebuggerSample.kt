@@ -68,13 +68,33 @@ fun RebuggerSample() {
     }
 }
 
+class MyClass {
+    var state1 by mutableStateOf("ChromecastState.NOT_CONNECTED")
+        private set
+    var state2 by mutableStateOf("ChromecastState.NOT_CONNECTED")
+        private set
+
+    var state3 = mutableStateOf("ChromecastState.NOT_CONNECTED")
+
+
+    var myClass = MyClass()
+}
+
 
 @Composable
 fun VehicleUi(
     car: Car,
     bike: Bike,
+    myClass: MyClass = MyClass()
 ) {
     println("Vehicle recomposed")
+    Text(text = "myDirectState is ${myClass.state1}")
+    val state2 = myClass.state2
+    Text(text = "State two is $state2")
+    val state3 = myClass.state3
+    Text(text = "State three is ${myClass.state3}")
+    val state4 = myClass.myClass.state1
+
 
     Rebugger(
         trackMap = mapOf(
