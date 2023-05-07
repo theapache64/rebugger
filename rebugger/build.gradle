@@ -62,7 +62,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.theapache64'
             artifactId = 'rebugger'
-            version = '1.0.0-alpha02'
+            version = '1.0.0-alpha03'
 
             afterEvaluate {
                 from components.release
