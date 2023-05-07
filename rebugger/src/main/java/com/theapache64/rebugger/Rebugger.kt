@@ -8,7 +8,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import java.sql.Ref
 
 private const val TAG = "Rebugger"
 
@@ -17,11 +16,12 @@ private class Ref<T>(var value: T)
 @Composable
 fun Rebugger(
     trackMap: Map<String, Any?>,
+    logger: (String) -> Unit = { message -> Log.i(TAG, message) },
     composableName: String = Thread.currentThread().stackTrace[3].methodName,
 ) {
 
     LaunchedEffect(Unit) {
-        Log.i(TAG, "🐞 Rebugger activated on `$composableName`")
+        logger("🐞 Rebugger activated on `$composableName`")
     }
 
     val count = remember { Ref(0) }
@@ -45,10 +45,10 @@ fun Rebugger(
     }
 
     if (changeLog.isNotEmpty()) {
-        Log.i(TAG, "🐞$composableName recomposed because $changeLog")
+        logger( "🐞$composableName recomposed because $changeLog")
     } else {
         if (count.value >= 1 && !flag.value) {
-            Log.i(TAG, "🐞$composableName recomposed not because of param change")
+            logger("🐞$composableName recomposed not because of param change")
         } else {
             flag.value = false
         }
