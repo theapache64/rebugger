@@ -76,6 +76,26 @@ fun VehicleUi(
 
 ![image](https://user-images.githubusercontent.com/9678279/228624484-c1de1112-c13c-4b9b-8788-e2a4b917368e.png)
 
+## 🎨 Customization
+
+You can use the `RebuggerConfig.init` function to override default properties of Rebugger. 
+
+```kotlin
+class App : Application() {
+    // ...
+    
+    override fun onCreate() {
+        super.onCreate()
+        
+        // ...
+        
+        RebuggerConfig.init(
+            tag = "MyAppRebugger", // changing default tag
+            logger = { tag, message -> Timber.i(tag, message) } // use Timber for logging
+        )
+    }
+}
+```
 
 ## 🟠 Limitation
 
