@@ -97,6 +97,13 @@ class App : Application() {
 }
 ```
 
+## 🔌 Plugin
+
+You can use the [Rebugger IntelliJ plugin](https://plugins.jetbrains.com/plugin/21633-rebugger) to generate the `Rebugger` function call.
+
+https://user-images.githubusercontent.com/9678279/235495156-445e7ced-30fa-41dd-9b37-84b80502187f.mov
+
+
 ## 🟠 Limitation
 
 ### Auto Name Picking
@@ -157,4 +164,4 @@ Rebugger(
 
 ## 🌇 TODO
 
-- IDE plugin : To generate `Rebugger` call (vote [here](https://github.com/theapache64/rebugger/issues/1))
+- ✅ IDE plugin : To generate `Rebugger` call (vote [here](https://github.com/theapache64/rebugger/issues/1))
