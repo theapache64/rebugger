@@ -80,7 +80,10 @@ fun VehicleUi(
         trackMap = mapOf(
             "car" to car,
             "bike" to bike,
-        )
+        ),
+        logger = {tag, message ->
+
+        }
     )
     Column {
         Text("Car is $car")

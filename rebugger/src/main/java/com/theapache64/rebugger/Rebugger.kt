@@ -1,6 +1,5 @@
 package com.theapache64.rebugger
 
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
@@ -9,19 +8,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 
-private const val TAG = "Rebugger"
-
 private class Ref<T>(var value: T)
 
 @Composable
 fun Rebugger(
     trackMap: Map<String, Any?>,
-    logger: (String) -> Unit = { message -> Log.i(TAG, message) },
+    logger: (tag: String, message: String) -> Unit = { tag, message ->
+        RebuggerConfig.logger.invoke(
+            tag,
+            message
+        )
+    },
     composableName: String = Thread.currentThread().stackTrace[3].methodName,
 ) {
 
     LaunchedEffect(Unit) {
-        logger("🐞 Rebugger activated on `$composableName`")
+        logger(RebuggerConfig.tag, "🐞 Rebugger activated on `$composableName`")
     }
 
     val count = remember { Ref(0) }
@@ -39,16 +41,15 @@ fun Rebugger(
             changeLog.append("\n\t `$key` changed from `$oldArg` to `$newArg`, ")
             flag.value = true
 
-            @Suppress("UNUSED_VALUE")
             recompositionTrigger = !recompositionTrigger
         }
     }
 
     if (changeLog.isNotEmpty()) {
-        logger( "🐞$composableName recomposed because $changeLog")
+        logger(RebuggerConfig.tag, "🐞$composableName recomposed because $changeLog")
     } else {
         if (count.value >= 1 && !flag.value) {
-            logger("🐞$composableName recomposed not because of param change")
+            logger(RebuggerConfig.tag, "🐞$composableName recomposed, but reason is unknown. Are you sure you added all params to `trackMap`? 🤔")
         } else {
             flag.value = false
         }
