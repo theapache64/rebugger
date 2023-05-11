@@ -16,15 +16,33 @@ Rebugger is a simple compose utility function that can track the change in the g
 
 ![latestVersion](https://img.shields.io/github/v/release/theapache64/rebugger)
 
-```groovy
+**Kotlin Script**
+
+```kotlin
 repositories {
-  maven { url 'https://jitpack.io' } // Add jitpack
+    ...
+    maven { url = uri("https://jitpack.io") } // Add jitpack
 }
 
 dependencies {
-  implementation 'com.github.theapache64:rebugger:<latest.version>'
+    implementation("com.github.theapache64:rebugger:<latest.version>")
 }
 ```
+
+**Groovy**
+
+```groovy
+repositories {
+    ...
+    maven { url 'https://jitpack.io' } // Add jitpack
+}
+
+dependencies {
+    implementation 'com.github.theapache64:rebugger:<latest.version>'
+}
+```
+
+
 
 ### 2. Add `Rebugger` call
 
