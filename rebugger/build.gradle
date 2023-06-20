@@ -16,7 +16,7 @@ android {
     }
 
     defaultConfig {
-        minSdk 24
+        minSdk 21
         targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -59,7 +59,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.theapache64'
             artifactId = 'rebugger'
-            version = '1.0.0-alpha04'
+            version = '1.0.0-alpha06'
 
             afterEvaluate {
                 from components.release
