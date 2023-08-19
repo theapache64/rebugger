@@ -14,7 +14,7 @@ Rebugger is a simple compose utility function that can track the change in the g
 
 ### 1. Add dependencies
 
-![latestVersion](https://img.shields.io/github/v/release/theapache64/rebugger)
+[![latestVersion](https://jitpack.io/v/theapache64/rebugger.svg)](https://jitpack.io/#theapache64/rebugger)
 
 **Kotlin Script**
 
