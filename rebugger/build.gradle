@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.theapache64.rebugger'
-    compileSdk 33
+    compileSdk 34
 
     publishing {
         singleVariant("release") {
@@ -17,7 +17,7 @@ android {
 
     defaultConfig {
         minSdk 21
-        targetSdk 33
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
