@@ -43,7 +43,7 @@ fun Rebugger(
             }
 
             oldArg !== newArg -> {
-                "`$key` changed. Content remains the same, but the instance has changed, "
+                "`$key` instance changed, but content remains the same -> `$oldArg`"
             }
 
             else -> {

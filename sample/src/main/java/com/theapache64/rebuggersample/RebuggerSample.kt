@@ -17,7 +17,7 @@ import com.theapache64.rebugger.Rebugger
 
 data class Car(val name: String)
 data class Bike(val name: String)
-data class Human(val name: String)
+data class Rocket(val name: String)
 
 @Composable
 fun RebuggerSample() {
@@ -73,6 +73,7 @@ fun RebuggerSample() {
 fun VehicleUi(
     car: Car,
     bike: Bike,
+    rocket: Rocket = Rocket(name = "Falcon 9") // by default, everytime VehicleUi is recomposed, a new instance of Rocket will be created
 ) {
     println("Vehicle recomposed")
 
@@ -80,6 +81,7 @@ fun VehicleUi(
         trackMap = mapOf(
             "car" to car,
             "bike" to bike,
+            "rocket" to rocket
         ),
     )
     Column {
