@@ -7,6 +7,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import java.lang.reflect.Modifier
 
 private class Ref<T>(var value: T)
 
@@ -19,7 +20,7 @@ fun Rebugger(
             message
         )
     },
-    composableName: String = Thread.currentThread().stackTrace[3].methodName,
+    composableName: String = Thread.currentThread().stackTrace[3].methodName
 ) {
 
     LaunchedEffect(Unit) {
@@ -36,11 +37,22 @@ fun Rebugger(
     for ((key, newArg) in trackMap) {
         var recompositionTrigger by remember { mutableStateOf(false) }
         val oldArg = remember(recompositionTrigger) { newArg }
+        val reason = when {
+            oldArg != newArg -> {
+                "`$key` changed from `$oldArg` to `$newArg`, "
+            }
 
-        if (oldArg != newArg) {
-            changeLog.append("\n\t `$key` changed from `$oldArg` to `$newArg`, ")
+            oldArg !== newArg -> {
+                "`$key` changed. Content remains the same, but the instance has changed, "
+            }
+
+            else -> {
+                null
+            }
+        }
+        if (reason != null) {
+            changeLog.append("\n\t $reason")
             flag.value = true
-
             recompositionTrigger = !recompositionTrigger
         }
     }
@@ -49,7 +61,10 @@ fun Rebugger(
         logger(RebuggerConfig.tag, "🐞$composableName recomposed because $changeLog")
     } else {
         if (count.value >= 1 && !flag.value) {
-            logger(RebuggerConfig.tag, "🐞$composableName recomposed, but reason is unknown. Are you sure you added all params to `trackMap`? 🤔")
+            logger(
+                RebuggerConfig.tag,
+                "🐞$composableName recomposed, but reason is unknown. Are you sure you added all params to `trackMap`? 🤔"
+            )
         } else {
             flag.value = false
         }
