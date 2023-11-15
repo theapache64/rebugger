@@ -43,6 +43,8 @@ internal fun App() = AppTheme {
     var password by remember { mutableStateOf("") }
     var passwordVisibility by remember { mutableStateOf(false) }
 
+    HelloRebugger()
+
     Column(modifier = Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.safeDrawing)) {
 
         Row(
