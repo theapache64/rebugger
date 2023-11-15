@@ -6,6 +6,7 @@ compose = "1.5.10"
 androidx-appcompat = "1.6.1"
 androidx-activityCompose = "1.7.2"
 compose-uitooling = "1.5.1"
+publish = "0.25.3"
 
 [libraries]
 
@@ -19,3 +20,4 @@ multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotl
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+publish = { id = "com.vanniktech.maven.publish", version.ref = "publish" }
