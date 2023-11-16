@@ -1,5 +1,5 @@
 rootProject.name = "Rebugger"
-include(":sample:composeApp")
+include(":composeApp")
 include(":rebugger")
 
 pluginManagement {
