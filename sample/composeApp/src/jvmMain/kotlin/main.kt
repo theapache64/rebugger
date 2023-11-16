@@ -2,8 +2,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
+import com.theapache64.rebuggersample.RebuggerSample
 import java.awt.Dimension
-import com.github.theapache64.rebugger.App
 
 fun main() = application {
     Window(
@@ -12,6 +12,6 @@ fun main() = application {
         onCloseRequest = ::exitApplication,
     ) {
         window.minimumSize = Dimension(350, 600)
-        App()
+        RebuggerSample()
     }
 }
