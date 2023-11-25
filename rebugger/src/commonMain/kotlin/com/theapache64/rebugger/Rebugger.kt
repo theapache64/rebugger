@@ -8,7 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 
-internal expect fun findComposableName() : String
+internal expect fun findComposableName() : String?
 
 private class Ref<T>(var value: T)
 
@@ -21,7 +21,7 @@ fun Rebugger(
             message
         )
     },
-    composableName: String = findComposableName()
+    composableName: String? = findComposableName()
 ) {
 
     LaunchedEffect(Unit) {
