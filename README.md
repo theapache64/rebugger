@@ -14,7 +14,7 @@ Rebugger is a simple compose utility function that can track the change in the g
 
 ### 1. Add dependencies
 
-[![latestVersion](https://jitpack.io/v/theapache64/rebugger.svg)](https://jitpack.io/#theapache64/rebugger)
+[![latestVersion](https://maven-badges.herokuapp.com/maven-central/io.github.theapache64/rebugger/badge.svg)](https://mvnrepository.com/artifact/io.github.theapache64/rebugger)
 
 **Kotlin Script**
 
@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.theapache64:rebugger:<latest.version>")
+    implementation("io.github.theapache64:rebugger:1.0.0-rc01")
 }
 ```
 
@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.theapache64:rebugger:<latest.version>'
+    implementation 'io.github.theapache64:rebugger:1.0.0-rc01'
 }
 ```
 
