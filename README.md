@@ -21,11 +21,11 @@ Rebugger is a simple compose utility function that can track the change in the g
 ```kotlin
 repositories {
     ...
-    maven { url = uri("https://jitpack.io") } // Add jitpack
+    mavenCentral()
 }
 
 dependencies {
-    implementation("com.github.theapache64:rebugger:<latest.version>")
+    implementation("io.github.theapache64:rebugger:<latest.version>")
 }
 ```
 
@@ -34,14 +34,13 @@ dependencies {
 ```groovy
 repositories {
     ...
-    maven { url 'https://jitpack.io' } // Add jitpack
+    mavenCentral() 
 }
 
 dependencies {
-    implementation 'com.github.theapache64:rebugger:<latest.version>'
+    implementation 'io.github.theapache64:rebugger:<latest.version>'
 }
 ```
-
 
 
 ### 2. Add `Rebugger` call
