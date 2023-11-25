@@ -178,7 +178,3 @@ Rebugger(
     ),
 )
 ```
-
-## 🌇 TODO
-
-- ✅ IDE plugin : To generate `Rebugger` call (vote [here](https://github.com/theapache64/rebugger/issues/1))
