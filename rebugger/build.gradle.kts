@@ -9,6 +9,7 @@ plugins {
 
 kotlin {
     androidTarget {
+        publishLibraryVariants("release")
         compilations.all {
             kotlinOptions {
                 jvmTarget = "17"
@@ -95,7 +96,4 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.3"
     }
-}
-dependencies {
-    implementation("androidx.core:core-ktx:+")
 }
