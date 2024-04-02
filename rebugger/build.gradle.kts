@@ -43,10 +43,6 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(compose.runtime)
-            implementation(compose.material3)
-            implementation(compose.materialIconsExtended)
-            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-            implementation(compose.components.resources)
         }
 
         commonTest.dependencies {
@@ -54,9 +50,8 @@ kotlin {
         }
 
         androidMain.dependencies {
-            implementation(libs.androidx.appcompat)
             implementation(libs.androidx.activityCompose)
-            implementation(libs.compose.uitooling)
+
         }
 
         jvmMain.dependencies {

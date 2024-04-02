@@ -3,8 +3,7 @@
 
     <application
         android:icon="@android:drawable/ic_menu_compass"
-        android:label="Rebugger"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:label="Rebugger">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
