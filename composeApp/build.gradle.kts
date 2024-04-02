@@ -78,7 +78,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
         targetSdk = 34
 
         applicationId = "com.github.theapache64.rebugger.androidApp"
