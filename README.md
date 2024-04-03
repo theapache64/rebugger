@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.theapache64:rebugger:1.0.0-rc02")
+    implementation("io.github.theapache64:rebugger:1.0.0-rc03")
 }
 ```
 
@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.theapache64:rebugger:1.0.0-rc02'
+    implementation 'io.github.theapache64:rebugger:1.0.0-rc03'
 }
 ```
 
