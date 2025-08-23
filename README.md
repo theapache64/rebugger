@@ -25,7 +25,8 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.theapache64:rebugger:1.0.0-rc03")
+    // [latest version - i promise!]
+    implementation("io.github.theapache64:rebugger:1.0.0")
 }
 ```
 
@@ -38,7 +39,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.theapache64:rebugger:1.0.0-rc03'
+    // [latest version - i promise!]
+    implementation 'io.github.theapache64:rebugger:1.0.0'
 }
 ```
 
