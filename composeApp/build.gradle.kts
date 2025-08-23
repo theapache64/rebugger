@@ -3,16 +3,13 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.compose)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.android.application)
 }
 
 kotlin {
+    jvmToolchain(17)
     androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "17"
-            }
-        }
     }
 
     jvm()

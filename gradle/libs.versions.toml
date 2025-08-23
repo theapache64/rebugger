@@ -1,11 +1,11 @@
 [versions]
 
-kotlin = "1.9.20"
-agp = "8.1.2"
-compose = "1.6.1"
+kotlin = "2.2.10"
+agp = "9.0.0-alpha01"
+compose = "1.9.0-beta03"
 androidx-activityCompose = "1.8.2"
 compose-uitooling = "1.6.4"
-publish = "0.25.3"
+publish = "0.34.0"
 
 [libraries]
 
@@ -16,6 +16,8 @@ compose-uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "
 
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+kotlin-compose = { id ="org.jetbrains.kotlin.plugin.compose",version.ref = "kotlin"}
+kotlin-android = { id ="org.jetbrains.kotlin.android",version.ref = "kotlin"}
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 publish = { id = "com.vanniktech.maven.publish", version.ref = "publish" }

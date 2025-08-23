@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rebugger-jvm">
+    <output-path>$PROJECT_DIR$/rebugger/build/libs</output-path>
+    <root id="archive" name="rebugger-jvm.jar">
+      <element id="module-output" name="Rebugger.rebugger.jvmMain" />
+    </root>
+  </artifact>
+</component>
