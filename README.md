@@ -110,7 +110,7 @@ class App : Application() {
         
         RebuggerConfig.init(
             tag = "MyAppRebugger", // changing default tag
-            logger = { tag, message -> Timber.i(tag, message) } // use Timber for logging
+            logger = { tag, message -> Timber.tag(tag).i(message) } // use Timber for logging
         )
     }
 }
