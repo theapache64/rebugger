@@ -1,5 +1,7 @@
 # 🐞 Rebugger
 
+![](https://img.shields.io/badge/%23No_AI_used-00000)
+
 > Rebugger : A recomposition debugger
 
 Being a “compose dev” our enemy number one is unnecessary recompositions 🤕. Often times we use tools like [recompositionHighligher](https://github.com/theapache64/boil/blob/master/files/RecompositionHighlighter.kt), [LogComposition](https://github.com/theapache64/boil/blob/master/files/LogComposition.kt), and layout inspector to count the recomposition, but there’s no direct way to understand “why” the recomposition has happened.
